@@ -5,6 +5,7 @@ import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
+
 //MINIM VARIABLES
 Minim minim; //toolbox of functions to load files
 AudioPlayer bump; //AudioPlayer to import individual sound effects
@@ -19,6 +20,8 @@ final int INTRO = 0; //final will lock the values in place, cannot INTRO+1
 final int GAME = 1;
 final int PAUSE = 2;
 final int GAMEOVER = 3;
+final int OPTIONS = 4;
+
 
 //TARGET INT
 float x;
@@ -51,7 +54,7 @@ void setup() {
   coin = minim.loadFile("coin.wav");
   bump = minim.loadFile("bump.wav");
   gameover = minim.loadFile("gameover.wav");
-  theme = minim.loadFile("mario bros theme.mp3");
+  theme = minim.loadFile("theme.mp3");
 }
 
 //================================================================================
@@ -67,6 +70,9 @@ void draw() { //picks which screen to go to
     
   } else if (mode == GAMEOVER) {
     gameover();
+    
+  } else if (mode == OPTIONS) {
+    options();
     
   } else {
     println("Error: Mode = " + mode); //will tell you where the error is
