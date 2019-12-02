@@ -42,6 +42,19 @@ PImage toast;
 PImage baguette;
 PImage croissant;
 
+
+//SLIDER
+float slider;
+
+
+//SIZE
+float targetsize;
+
+
+//BREAD
+int bread;
+
+
 //================================================================================
 void setup() {
 //TARGET MOVEMENT   
@@ -71,6 +84,19 @@ void setup() {
   toast = loadImage("bread.png");
   baguette = loadImage("baguette.png");
   croissant = loadImage("croissant.png");
+  
+  
+//SLIDER
+  slider = 440;
+  
+  
+//TARGET SIZE
+  targetsize = 10;
+  
+  
+//BREAD INT
+  bread = toast;
+
 }
 
 //================================================================================
@@ -101,4 +127,5 @@ void draw() { //picks which screen to go to
     println("Error: Mode = " + mode); //will tell you where the error is
   }  
   
+    println(mouseX, mouseY); //tells you coordinates of mouse
 }
