@@ -53,6 +53,13 @@ float targetsize;
 
 //BREAD
 int bread;
+//0 = toast
+//1 = baguette
+//2 = croissant
+
+
+//HIGHSCORE
+int highscore;
 
 
 //================================================================================
@@ -64,6 +71,7 @@ void setup() {
   lives = 3;
   vx = random(-4,4); //chose random float (decimal) number between -4 and 4 
   vy = random(-4,4); //subtracting from y makes it go up
+  targetsize = 15;
   
   
 //SETUP
@@ -89,13 +97,13 @@ void setup() {
 //SLIDER
   slider = 440;
   
-  
-//TARGET SIZE
-  targetsize = 10;
-  
-  
-//BREAD INT
-  bread = toast;
+
+//BREAD
+  bread = 0;
+
+
+//HIGHSCORE
+  highscore = 0;
 
 }
 
