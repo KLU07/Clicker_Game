@@ -41,7 +41,7 @@ int lives;
 PImage toast;
 PImage baguette;
 PImage croissant;
-
+PImage bear;
 
 //SLIDER
 float slider;
@@ -59,7 +59,7 @@ int bread;
 
 
 //HIGHSCORE
-int highscore;
+int highScore;
 
 
 //================================================================================
@@ -92,7 +92,7 @@ void setup() {
   toast = loadImage("bread.png");
   baguette = loadImage("baguette.png");
   croissant = loadImage("croissant.png");
-  
+  bear = loadImage("beareatingbread.png");
   
 //SLIDER
   slider = 440;
@@ -103,7 +103,7 @@ void setup() {
 
 
 //HIGHSCORE
-  highscore = 0;
+  highScore = 0;
 
 }
 
